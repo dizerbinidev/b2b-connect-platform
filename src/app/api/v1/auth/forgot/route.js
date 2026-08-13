@@ -17,14 +17,14 @@ export async function POST(req) {
     // Verifica se o usuário existe
     const userResult = await db.query(
       `SELECT id, email FROM usuarios WHERE email = $1 LIMIT 1`,
-      [email]
+      [email],
     );
 
     if (userResult.rows.length === 0) {
       // Não revela se usuário existe ou não
       return Response.json(
         { message: 'Se o e-mail existir, enviaremos instruções.' },
-        { status: 200 }
+        { status: 200 },
       );
     }
 
@@ -45,7 +45,7 @@ export async function POST(req) {
       INSERT INTO password_resets (usuario_id, token, expires_at)
       VALUES ($1, $2, $3)
     `,
-      [user.id, token, expiresAt]
+      [user.id, token, expiresAt],
     );
 
     // Monta link dinâmico
@@ -53,7 +53,7 @@ export async function POST(req) {
 
     // Envia e-mail pelo resend
     await resend.emails.send({
-      from: 'Suporte Shoesnetworld <no-reply@shoesnetworld.com>',
+      from: 'Suporte b2b-connect-platform <no-reply@b2b-connect-platform.com>',
       to: user.email,
       subject: 'Recuperação de senha',
       html: `
@@ -66,7 +66,7 @@ export async function POST(req) {
 
     return Response.json(
       { message: 'Se o e-mail existir, enviaremos instruções.' },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (err) {
     console.error('Erro em forgot-password:', err);

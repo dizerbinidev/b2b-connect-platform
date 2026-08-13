@@ -1,4 +1,4 @@
-// UI Components - Design System ShoesNetWorld
+// UI Components - Design System b2b-connect-platform
 // Centralized exports for easy importing
 
 export { default as Button } from './Button';

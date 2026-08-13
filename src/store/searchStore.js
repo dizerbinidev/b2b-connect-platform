@@ -32,18 +32,19 @@ const useSearchStore = create(
         set({ filters: { ...filters, [key]: value } });
       },
 
-      resetFilters: () => set({
-        filters: {
-          categoria: [],
-          continente: [],
-          rating: [],
-          ordenar: 'recentes',
-        },
-      }),
+      resetFilters: () =>
+        set({
+          filters: {
+            categoria: [],
+            continente: [],
+            rating: [],
+            ordenar: 'recentes',
+          },
+        }),
 
       addToRecentSearches: (term) => {
         if (!term.trim()) return;
-        
+
         const { recentSearches } = get();
         const filtered = recentSearches.filter((s) => s !== term);
         const updated = [term, ...filtered].slice(0, 10); // Keep last 10
@@ -52,10 +53,11 @@ const useSearchStore = create(
 
       clearRecentSearches: () => set({ recentSearches: [] }),
 
-      setResults: (results, total) => set({
-        results,
-        totalResults: total,
-      }),
+      setResults: (results, total) =>
+        set({
+          results,
+          totalResults: total,
+        }),
 
       setLoading: (loading) => set({ loading }),
 
@@ -68,7 +70,7 @@ const useSearchStore = create(
 
         try {
           const params = new URLSearchParams();
-          
+
           if (query) params.append('q', query);
           if (filters.categoria.length) {
             filters.categoria.forEach((c) => params.append('categoria', c));
@@ -77,13 +79,18 @@ const useSearchStore = create(
             filters.continente.forEach((c) => params.append('continente', c));
           }
           if (filters.rating.length) {
-            params.append('rating_min', Math.min(...filters.rating.map(Number)));
+            params.append(
+              'rating_min',
+              Math.min(...filters.rating.map(Number)),
+            );
           }
           if (filters.ordenar) {
             params.append('ordenar', filters.ordenar);
           }
 
-          const res = await fetch(`/api/v1/vitrines/search?${params.toString()}`);
+          const res = await fetch(
+            `/api/v1/vitrines/search?${params.toString()}`,
+          );
           const data = await res.json();
 
           set({
@@ -104,12 +111,12 @@ const useSearchStore = create(
       },
     }),
     {
-      name: 'shoesnetworld-search',
+      name: 'b2b-connect-platform-search',
       partialize: (state) => ({
         recentSearches: state.recentSearches,
       }),
-    }
-  )
+    },
+  ),
 );
 
 export default useSearchStore;

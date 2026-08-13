@@ -143,7 +143,7 @@ const useFavoritesStore = create(
       },
     }),
     {
-      name: 'shoesnetworld-favorites',
+      name: 'b2b-connect-platform-favorites',
       partialize: (state) => ({ favorites: state.favorites }),
     },
   ),

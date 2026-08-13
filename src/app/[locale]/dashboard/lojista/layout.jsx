@@ -114,12 +114,12 @@ export default function DashboardLayout({ children }) {
         <div className='flex items-center justify-between w-full sm:w-auto'>
           <div className='flex items-center space-x-4'>
             <Image
-              src='/assets/logos/shoesnetworld.png'
+              src='/assets/logos/b2b-connect-platform-Logo.png'
               width={50}
               height={50}
-              alt='Shoesnetworld Logo'
+              alt='b2b-connect-platform-logo'
             />
-            <h1 className='text-lg font-bold'>Shoesnetworld</h1>
+            <h1 className='text-lg font-bold'>b2b-connect-platform</h1>
             <Loader />
           </div>
           <button
@@ -168,7 +168,7 @@ export default function DashboardLayout({ children }) {
       {/* Footer */}
       <footer className='bg-gray-900 px-6 py-4 text-sm text-white'>
         <div className='flex flex-col items-center space-y-2 sm:flex-row sm:justify-between sm:space-y-0'>
-          <span>&copy; {new Date().getFullYear()} Shoesnetworld</span>
+          <span>&copy; {new Date().getFullYear()} b2b-connect-platform</span>
           <div className='flex space-x-4'>
             <Link href='/public/contato'>{t('Contact')}</Link>
             <Link href='/public/suporte'>{t('Support')}</Link>

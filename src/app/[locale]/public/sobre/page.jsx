@@ -40,7 +40,7 @@ export default function SobrePage() {
           className='object-cover brightness-50'
         />
         <div className='relative z-10 max-w-2xl px-4'>
-          <h1 className='text-4xl font-bold mb-3'>Shoesnetworld</h1>
+          <h1 className='text-4xl font-bold mb-3'>b2b-connect-platform</h1>
           <p className='text-lg text-gray-200'>
             Conectamos fornecedores, lojistas e representantes em uma plataforma
             única e moderna.
@@ -86,8 +86,8 @@ export default function SobrePage() {
         <div className='max-w-5xl mx-auto text-center mb-10'>
           <h2 className='text-3xl font-bold mb-3'>Quem somos?</h2>
           <p className='text-gray-600'>
-            Shoesnetworld é uma plataforma digital internacional voltada ao
-            comércio global de calçados, acessórios, componentes, couros,
+            b2b-connect-platform é uma plataforma digital internacional voltada
+            ao comércio global de calçados, acessórios, componentes, couros,
             máquinas e serviços do setor calçadista.
             <br />
             Com base no Brasil e uma rede de empresas parceiras da América

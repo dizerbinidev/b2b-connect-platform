@@ -3,13 +3,20 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Bell, Search, ChevronDown, User, Settings, LogOut } from 'lucide-react';
+import {
+  Bell,
+  Search,
+  ChevronDown,
+  User,
+  Settings,
+  LogOut,
+} from 'lucide-react';
 import LanguageSwitcher from 'components/shared/LanguageSwitcher';
 import Avatar from 'components/ui/Avatar';
 
 /**
  * Header Component - Premium Design
- * 
+ *
  * Features:
  * - Glass effect background
  * - User dropdown menu
@@ -55,32 +62,35 @@ export default function Header({
         ${className}
       `}
     >
-      <div className="flex items-center justify-between">
+      <div className='flex items-center justify-between'>
         {/* Left side - Logo and search */}
-        <div className="flex items-center gap-6">
+        <div className='flex items-center gap-6'>
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <Link
+            href='/'
+            className='flex items-center gap-3 hover:opacity-80 transition-opacity'
+          >
             <Image
-              src="/assets/logos/shoesnetworld.png"
+              src='/assets/logos/b2b-connect-platform.png'
               width={40}
               height={40}
-              alt="ShoesNetWorld"
-              className="rounded-lg"
+              alt='b2b-connect-platform'
+              className='rounded-lg'
             />
-            <span className="font-heading font-bold text-lg text-[var(--color-gray-900)] hidden sm:block">
-              ShoesNetWorld
+            <span className='font-heading font-bold text-lg text-[var(--color-gray-900)] hidden sm:block'>
+              b2b-connect-platform
             </span>
           </Link>
 
           {/* Search bar */}
           {showSearch && (
-            <div className="hidden md:flex items-center">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-gray-400)]" />
+            <div className='hidden md:flex items-center'>
+              <div className='relative'>
+                <Search className='absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-gray-400)]' />
                 <input
-                  type="text"
-                  placeholder="Buscar..."
-                  className="
+                  type='text'
+                  placeholder='Buscar...'
+                  className='
                     w-64 pl-10 pr-4 py-2
                     text-sm
                     bg-[var(--color-gray-100)]
@@ -89,7 +99,7 @@ export default function Header({
                     placeholder:text-[var(--color-gray-400)]
                     focus:outline-none focus:bg-white focus:border-[var(--color-primary-300)]
                     transition-all
-                  "
+                  '
                 />
               </div>
             </div>
@@ -97,45 +107,45 @@ export default function Header({
         </div>
 
         {/* Right side - Actions */}
-        <div className="flex items-center gap-3">
+        <div className='flex items-center gap-3'>
           {/* Notifications */}
-          <button className="
+          <button
+            className='
             relative p-2
             rounded-[var(--radius-lg)]
             text-[var(--color-gray-500)]
             hover:bg-[var(--color-gray-100)]
             transition-colors
-          ">
+          '
+          >
             <Bell size={20} />
             {/* Notification badge */}
-            <span className="
+            <span
+              className='
               absolute top-1 right-1
               w-2 h-2
               bg-[var(--color-accent-rose)]
               rounded-full
-            " />
+            '
+            />
           </button>
 
           {/* Language Switcher */}
           <LanguageSwitcher />
 
           {/* User Menu */}
-          <div className="relative" ref={menuRef}>
+          <div className='relative' ref={menuRef}>
             <button
               onClick={() => setUserMenuOpen(!userMenuOpen)}
-              className="
+              className='
                 flex items-center gap-2 p-1.5
                 rounded-[var(--radius-lg)]
                 hover:bg-[var(--color-gray-100)]
                 transition-colors
-              "
+              '
             >
-              <Avatar
-                name={user?.nome || 'User'}
-                size="sm"
-                status="online"
-              />
-              <span className="hidden sm:block text-sm font-medium text-[var(--color-gray-700)]">
+              <Avatar name={user?.nome || 'User'} size='sm' status='online' />
+              <span className='hidden sm:block text-sm font-medium text-[var(--color-gray-700)]'>
                 {user?.nome?.split(' ')[0] || 'Usuário'}
               </span>
               <ChevronDown
@@ -150,7 +160,8 @@ export default function Header({
 
             {/* Dropdown */}
             {userMenuOpen && (
-              <div className="
+              <div
+                className='
                 absolute right-0 mt-2
                 w-56
                 bg-white
@@ -159,40 +170,41 @@ export default function Header({
                 border border-[var(--color-gray-100)]
                 py-2
                 animate-fade-in-down
-              ">
+              '
+              >
                 {/* User info */}
-                <div className="px-4 py-3 border-b border-[var(--color-gray-100)]">
-                  <p className="font-semibold text-[var(--color-gray-900)]">
+                <div className='px-4 py-3 border-b border-[var(--color-gray-100)]'>
+                  <p className='font-semibold text-[var(--color-gray-900)]'>
                     {user?.nome || 'Usuário'}
                   </p>
-                  <p className="text-sm text-[var(--color-gray-500)]">
+                  <p className='text-sm text-[var(--color-gray-500)]'>
                     {user?.email || 'email@exemplo.com'}
                   </p>
                 </div>
 
                 {/* Menu items */}
-                <div className="py-1">
+                <div className='py-1'>
                   <Link
-                    href="/perfil"
-                    className="
+                    href='/perfil'
+                    className='
                       flex items-center gap-3 px-4 py-2
                       text-sm text-[var(--color-gray-700)]
                       hover:bg-[var(--color-gray-50)]
                       transition-colors
-                    "
+                    '
                     onClick={() => setUserMenuOpen(false)}
                   >
                     <User size={16} />
                     Meu Perfil
                   </Link>
                   <Link
-                    href="/configuracoes"
-                    className="
+                    href='/configuracoes'
+                    className='
                       flex items-center gap-3 px-4 py-2
                       text-sm text-[var(--color-gray-700)]
                       hover:bg-[var(--color-gray-50)]
                       transition-colors
-                    "
+                    '
                     onClick={() => setUserMenuOpen(false)}
                   >
                     <Settings size={16} />
@@ -201,15 +213,15 @@ export default function Header({
                 </div>
 
                 {/* Logout */}
-                <div className="border-t border-[var(--color-gray-100)] pt-1 mt-1">
+                <div className='border-t border-[var(--color-gray-100)] pt-1 mt-1'>
                   <button
                     onClick={handleLogout}
-                    className="
+                    className='
                       flex items-center gap-3 w-full px-4 py-2
                       text-sm text-[var(--color-accent-rose)]
                       hover:bg-[var(--color-error-bg)]
                       transition-colors
-                    "
+                    '
                   >
                     <LogOut size={16} />
                     Sair

@@ -1,4 +1,4 @@
-# 👞 ShoesNetWorld
+# 👞 b2b-connect-platform
 
 **Conectando a Indústria Calçadista: Lojistas, Representantes e Fornecedores.**
 
@@ -48,8 +48,8 @@ Siga os passos abaixo para rodar o projeto localmente.
 ### 1. Clone o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/shoesnetworld.git
-cd shoesnetworld
+git clone https://github.com/seu-usuario/b2b-connect-platform.git
+cd b2b-connect-platform
 ```
 
 ### 2. Configuração de Variáveis de Ambiente

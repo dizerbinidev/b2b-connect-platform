@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware';
 
 /**
  * Onboarding Store - Track user's tour progress
- * 
+ *
  * Features:
  * - Persist completed tours to localStorage
  * - Support multiple tours per dashboard
@@ -46,7 +46,7 @@ const useOnboardingStore = create(
         if (!currentTour) return;
 
         const nextStep = currentTour.currentStep + 1;
-        
+
         if (nextStep >= currentTour.steps.length) {
           // Tour completed
           get().completeTour();
@@ -137,10 +137,10 @@ const useOnboardingStore = create(
       },
     }),
     {
-      name: 'shoesnetworld-onboarding',
+      name: 'b2b-connect-platform-onboarding',
       partialize: (state) => ({ completedTours: state.completedTours }),
-    }
-  )
+    },
+  ),
 );
 
 export default useOnboardingStore;

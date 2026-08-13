@@ -13,12 +13,12 @@ import { useState } from 'react';
 // const marcas = [
 //   { src: '/assets/logos/logo_palm_springs.jpg', alt: 'Palm Springs' },
 //   { src: '/assets/logos/logo_akelian.png', alt: 'Akelian' },
-//   { src: '/assets/logos/shoesnetworld_old.png', alt: 'Shoesnetworld' },
+//   { src: '/assets/logos/b2b-connect-platform_old.png', alt: 'b2b-connect-platform' },
 //   { src: '/assets/logos/logo_palm_springs.jpg', alt: 'Palm Springs' },
 //   { src: '/assets/logos/logo_akelian.png', alt: 'Akelian' },
 //   { src: '/assets/logos/logo_palm_springs.jpg', alt: 'Palm Springs' },
 //   { src: '/assets/logos/logo_akelian.png', alt: 'Akelian' },
-//   { src: '/assets/logos/shoesnetworld_old.png', alt: 'Shoesnetworld' },
+//   { src: '/assets/logos/b2b-connect-platform_old.png', alt: 'b2b-connect-platform' },
 //   { src: '/assets/logos/logo_palm_springs.jpg', alt: 'Palm Springs' },
 //   { src: '/assets/logos/logo_akelian.png', alt: 'AkeliBronzean' },
 //   { src: '/assets/logos/logo_sneakers_brasil.png', alt: 'Sneakers Brasil' },
@@ -46,13 +46,13 @@ export default function MapaLayout({ children }) {
           <div className='flex items-center space-x-4'>
             <Link href='/public/mapa'>
               <Image
-                src='/assets/logos/shoesnetworld.png'
+                src='/assets/logos/b2b-connect-platform-Logo.png'
                 width={50}
                 height={50}
-                alt='Shoesnetworld Logo'
+                alt='b2b-connect-platform-Logo'
               />
             </Link>
-            <h1 className='text-lg font-bold'>Shoesnetworld</h1>
+            <h1 className='text-lg font-bold'>b2b-connect-platform</h1>
             <Loader />
           </div>
           <button

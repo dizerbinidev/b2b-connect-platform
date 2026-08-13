@@ -13,7 +13,7 @@ const faqs = [
   {
     pergunta: 'Como entro em contato com o suporte?',
     resposta:
-      'Através do botão de WhatsApp no rodapé do site ou enviando um e-mail para suporte@shoesnetworld.com.',
+      'Através do botão de WhatsApp no rodapé do site ou enviando um e-mail para suporte@b2b-connect-platform.com.',
   },
   {
     pergunta: 'Onde acompanho meus pedidos?',
@@ -60,7 +60,7 @@ export default function SuportePage() {
       {/* Faixa hero */}
       <div className='relative h-64 w-full overflow-hidden'>
         <img
-          src='/assets/mapashoesnetworld.jpg'
+          src='/assets/mapab2b-connect-platform.jpg'
           alt='Suporte'
           className='absolute inset-0 h-full w-full object-cover'
         />

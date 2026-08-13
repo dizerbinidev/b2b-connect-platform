@@ -32,7 +32,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: 'ShoesNetWorld',
+  title: 'b2b-connect-platform',
   description:
     'O maior hub do mercado calçadista global | The largest global footwear market hub',
   keywords: [
@@ -44,9 +44,9 @@ export const metadata = {
     'leather',
     'fornecedores',
   ],
-  authors: [{ name: 'ShoesNetWorld' }],
+  authors: [{ name: 'b2b-connect-platform' }],
   openGraph: {
-    title: 'ShoesNetWorld',
+    title: 'b2b-connect-platform',
     description: 'O maior hub do mercado calçadista global',
     type: 'website',
   },
